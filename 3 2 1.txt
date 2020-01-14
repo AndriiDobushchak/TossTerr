@@ -1,4 +1,0 @@
-var numb=[3,2,1];
-var sign=[" is bigger than "];
-var print=numb[0]+sign+numb[1]+sign+numb[2];
-print
