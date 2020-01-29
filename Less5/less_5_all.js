@@ -41,6 +41,7 @@
 		console.log("Task 3");
 		function checkAge() {
 			let age = prompt("Enter your age :");
+			age = age.trim();	// Прибираєм пробіли до і після age
 			
 			if (age === "") {
 				throw new Error(alert("The field is empty! Please enter your age"));
