@@ -1,0 +1,227 @@
+<!-- --- Task 1 ----- -->
+		<!-- 
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<meta charset="utf-8">	
+			<title>T1</title>
+		</head>
+
+		<body>	
+			
+			<div id="text">First</div>
+			
+			<script type="text/javascript">
+				
+				//document.getElementById("test").innerHTML = "Last";
+				//document.querySelector("#text").innerHTML = "Last";
+				//document.querySelectorAll("#text")[0].innerHTML = "Last";
+				document.getElementsByTagName("div")[0].innerHTML = "Last";
+	
+			</script>
+			
+		</body>
+		</html>	
+		 -->
+<!-- ----- Task 2 ----- -->
+
+	<!-- 
+			<!DOCTYPE html>
+			<html>
+			<head>
+				<meta charset="utf-8">	
+				<title>T2</title>
+			</head>
+
+			<body>
+			   <img class="image" src="egg.jpg">
+
+			   <script type="text/javascript">	
+
+			   		alert(document.querySelector("img").src = "chiсken.jpg");
+
+			   </script>
+	     	</body>
+
+			</html>	
+			 -->
+<!-- ----- Task 3 ----- -->
+<!-- 
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<meta charset="utf-8">	
+			<title>T2</title>
+		</head>
+
+		<body>
+
+		   
+			<h2>Article header</h2>      
+      		<div id = "text">
+		        <p>First paragraph</p>
+		        <p>Second paragraph</p>
+		        <p>Third paragraph</p>
+      		</div>
+			<p>Another text</p>
+
+		   	<script type="text/javascript">	
+		   		
+					  //  		for (i = 0; i < 3; i++) {// цикл перебору дочірних/дочірних елементів
+							// 	tmp = document.body.children[1].children[i].innerHTML;
+							// 	console.log("Selector text " + i + ": " + tmp); 
+							// }	
+
+			
+
+		 		for (i = 0; i < 3; i++) {	// цикл перебору дочірних/дочірних елементів
+				tmp = document.querySelectorAll("#text")[0].children[i].innerHTML;
+				console.log("Selector text " + i + ": " + tmp); 
+				}	
+
+		   	</script>
+     	</body>
+
+		</html>	 -->
+
+<!-- ---- Task 4 ----- -->
+	<!-- 
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<meta charset="utf-8">	
+			<title>T2</title>
+		</head>
+
+		<body>
+			<ul id = "list">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			<ul/>
+
+		   	<script type="text/javascript">
+		   		alert(document.querySelectorAll("#list")[0].children[0].innerHTML);
+		   		alert(document.querySelectorAll("#list")[0].children[4].innerHTML);
+		   		alert(document.querySelectorAll("#list")[0].children[1].innerHTML);
+		   		alert(document.querySelectorAll("#list")[0].children[3].innerHTML);
+		   		alert(document.querySelectorAll("#list")[0].children[2].innerHTML);
+				
+				// alert(document.body.children[0].children[0].innerHTML);
+				// alert(document.body.children[0].children[4].innerHTML);
+				// alert(document.body.children[0].children[1].innerHTML);
+				// alert(document.body.children[0].children[3].innerHTML);
+				// alert(document.body.children[0].children[2].innerHTML);
+
+		   	</script>
+     	</body>
+
+		</html>	
+		 -->
+<!-- ---- Task 5 ---- -->
+<!-- 
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<meta charset="utf-8">	
+			<title>T2</title>
+		</head>
+
+		<body>
+			<h1>I'am a big header!!!</h1>
+        <div id = "myDiv">
+            <p>First paragraph</p>
+            <p>Second paragraph</p>
+            <p>Third paragraph</p>
+            <p>Fourth paragraph</p>
+        </div>
+        <ul id = "myList">
+            <li>Make</li>
+            <li>me</li>
+            <li>horizontal!</li>
+        </ul>
+        <span>Make me invisible, please!</span>
+
+		   	<script type="text/javascript">
+
+		   		document.getElementsByTagName("h1")[0].style.backgroundColor = "rgb(0,222,0)";
+		   		document.body.children[1].children[0].style.fontWeight = "bold";
+		   		document.body.children[1].children[1].style.color = "red";
+		   		document.body.children[1].children[2].style.textDecoration = "underline";
+		   		document.body.children[1].children[3].style.fontStyle = "italic";
+
+				let horizontal = "";
+				for (i = 0; i < 3; i++) {
+				horizontal += document.querySelectorAll("#myList")[0].children[i].innerHTML;
+				}	
+		   		
+		   		document.querySelectorAll("#myList")[0].innerHTML = horizontal;
+
+		   		document.getElementsByTagName("span")[0].style.visibility = "hidden";
+		   		//document.getElementsByTagName("span")[0].style.color = "rgb(255,255,255)";
+		   		
+		   	</script>
+     	</body>
+
+		</html>	
+ -->
+
+<!-- ---- Task 6 ---- -->
+
+		<!-- <!DOCTYPE html>
+				<html>
+				<head>
+					<meta charset="utf-8">	
+					<title>T2</title>
+				</head>
+
+				<body>
+					<input type="text" id="input1" value="Text1">
+					<input type="text" id="input2" value="Text2">
+
+				   	<script type="text/javascript">
+						let inp1 = prompt("Type something here");
+						let inp2 = prompt("Type something here");
+
+						document.body.children[0].value = inp1;
+						document.body.children[1].value = inp2;
+
+						document.body.children[0].value = inp2;
+						document.body.children[1].value = inp1;
+				   		
+				   	</script>
+		     	</body>
+
+				</html>	
+		  -->
+
+  <!-- ---- Task 7 ---- -->
+	<!-- 
+	  <!DOCTYPE html>
+			<html>
+			<head>
+				<meta charset="utf-8">	
+				<title>T2</title>
+			</head>
+
+			<body>
+				
+			   	<script type="text/javascript">
+			   		let mainNewElem = document.createElement("main");	//створюєм новий елемент main
+			   		mainNewElem.className = "mainClass check item";		// додаєм назву класу
+			   		document.body.prepend(mainNewElem);				//додаєм div елемент до сторіки (body)
+
+			   		let divNewElem = document.createElement("div");	//створюєм новий div елемент
+			   		divNewElem.id = "myDiv";						//додаєм id
+			   		document.body.children[0].prepend(divNewElem);	//додаєм div елемент до сторіки (body)
+
+			   		//створюєм і додаєм новий p елемент						
+			   		document.body.children[0].children[0].prepend(document.createElement("p"));	
+			   		document.getElementsByTagName("p")[0].innerHTML = "First paragraph";
+			   	</script>
+	     	</body>
+
+			</html>	
+	  -->
