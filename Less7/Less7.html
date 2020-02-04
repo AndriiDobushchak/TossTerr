@@ -1,0 +1,256 @@
+<!-- --- Task 1 ----- -->
+	
+	<!-- <!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>Lesson 7</title>
+	</head>
+	<body>	
+		
+		<script type="text/javascript">
+			//відкриваємо новуТабу
+			let newTab = window.open("","New_window","width=300,height=300,left=100,top=100");
+
+			setTimeout(()=>newTab.resizeTo(500,500),2000);//ресайзим через 2 сек (стрілочна функція)
+			setTimeout(()=>newTab.moveTo(200,200),4000);//зсовуєм через 2 сек (2+2=4)
+			setTimeout("newTab.close()",6000);//закриваємо вікно 2 сек (2+2+2=6) без застос.функції
+
+		</script>			
+	</body>
+	</html>	 -->
+<!-- --- Task 2 --- -->	
+	
+	<!-- <!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>Lesson 7</title>
+	</head>
+	<body>
+		<p id ='text'>I learning JavaScript events!</p> 
+		<div>
+			<button . . . . . >Change style!</button>
+		</div>
+	
+		<script type="text/javascript">
+			document.getElementsByTagName("button")[0].onclick = function(){
+				let change = document.getElementById("text");
+				change.style.color = "rgb(255,160,0)";
+				change.style.fontSize = "20px";
+				change.style.fontFamily = "Comic Sans MS";
+			}
+
+		</script>			
+	</body>
+	</html>	 -->
+ 	
+ <!-- ---Task 3 --- -->
+	
+	<!-- <!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>Lesson 7</title>
+	</head>
+	<body>
+			<button id = "oneClick">Click to make this page blue</button>
+			<button id = "doubleClick">Double-click to make this page pink</button>
+			<button id = "holdClick">Click and hold to make this page brown</button>
+			<a href="">Hover over to make page yellow</a>
+		
+		<script type="text/javascript">
+			//клік івент
+			document.getElementById("oneClick").onclick = 
+			()=> document.getElementsByTagName("body")[0].style.backgroundColor = "rgb(0,0,255)";
+			//дабл-клік івент
+			document.getElementById("doubleClick").ondblclick = 
+			()=> document.getElementsByTagName("body")[0].style.backgroundColor = "rgb(255,192,203)";
+			//холд-клід івент
+			document.getElementById("holdClick").onmousedown = //натиснута кнопка миші
+			()=> document.getElementsByTagName("body")[0].style.backgroundColor = "rgb(101,67,33)";
+			document.getElementById("holdClick").onmouseup = //відпускаємо кнопку миші
+			()=> document.getElementsByTagName("body")[0].style.backgroundColor = "#ffffff";
+			//наведення на лінку
+			document.getElementsByTagName("a")[0].onmouseenter = 
+			()=> document.getElementsByTagName("body")[0].style.backgroundColor = "rgb(255,255,0)";
+			//відведення курсора миші від лінка
+			document.getElementsByTagName("a")[0].onmouseout =
+			()=> document.getElementsByTagName("body")[0].style.backgroundColor = "rgb(255,255,255)";
+			
+		</script>			
+	</body>
+	</html>	 -->
+ 	
+ <!-- --- Task 4 --- -->
+	
+	<!-- <!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>Lesson 7</title>
+	</head>
+	<body>
+		<select id="mySel">
+			<option id = "0" selected value="0">mouse</option>
+			<option id = "1" value="1">cat</option>
+			<option id = "2" value="2">dog</option>
+			<option id = "3" value="3">snake</option>
+			<option id = "4" value="4">fish</option>
+			<option id = "5" value="5">falcon</option>
+			<option id = "6" value="6">fox</option>
+			<option id = "7" value="7">deer</option>
+		</select>
+			<button id = "oneClick">Choose and Delete</button>		
+		<script type="text/javascript">
+		
+			document.getElementById("oneClick").onclick = function(){ 			
+			let i = document.getElementById("mySel").value; //змінна-ідентифікатор доступу			
+			document.getElementById(i).remove();
+			}
+		</script>			
+	</body>
+	</html>	 -->
+<!-- --- Task 5 --- -->
+		
+	<!-- <!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>Lesson 7</title>
+	</head>
+	<body style="background-color: gray;">
+			<button style=	"font-size: 128px;
+							background-color: yellow;
+							color: blue;" >
+			  	Live button !
+			</button>			
+		<script type="text/javascript">
+
+			//наведення миші
+			document.getElementsByTagName("button")[0].onmouseenter = function(){
+			let liveMessage = document.createTextNode("Mouse on me !"); //створюєм текстовий вузол
+			document.body.append(document.createElement("br"));//Створюєм і ДОДАЄМ елемент <br>
+			document.body.append(liveMessage); //додаєм живе повідомлення
+			}
+
+			//відведення миші
+			document.getElementsByTagName("button")[0].onmouseout = function(){
+			let liveMessage = document.createTextNode("Mouse is not on me !"); //створюєм текстовий вузол
+			document.body.append(document.createElement("br"));//Створюєм і ДОДАЄМ елемент <br>
+			document.body.append(liveMessage); //додаєм живе повідомлення
+			}
+
+			//натиснута ліва мишача кнопка =)
+			document.getElementsByTagName("button")[0].onmousedown = function(){
+			let liveMessage = document.createTextNode("I was pressed !"); //створюєм текстовий вузол
+			document.body.append(document.createElement("br"));//Створюєм і ДОДАЄМ елемент <br>
+			document.body.append(liveMessage); //додаєм живе повідомлення
+			}	
+
+		</script>			
+	</body>
+	</html>	 -->
+
+<!-- --- Task 6 --- -->
+			
+	<!-- <!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>Lesson 7</title>
+	</head>
+	<body>	
+		<span id="width"></span>
+		<span id="height"></span>
+							
+			<script type="text/javascript">
+
+				let widthLive = document.querySelector('#width');
+				let heightLive = document.querySelector('#height');
+				widthLive.textContent = "Width:" + window.innerWidth + " , "; //варіант innerHTML
+				heightLive.innerHTML = "Height: " + window.innerHeight;
+				
+				window.onresize = function() {	//функція відслідковування розмірів вікна
+				widthLive.textContent = "Width:" + window.innerWidth + " , ";
+				heightLive.innerHTML = "Height: " + window.innerHeight;
+				}
+			</script>			
+	</body>			
+	</html>	 -->
+<!-- --- Task 7 --- -->
+			
+	<!-- <!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>Lesson 7</title>
+	</head>
+	<body>
+
+		<select id = "country"> 
+			<option id = "0" selected value="0">Ukraine</option>
+			<option id = "1" value="1">USA</option>
+			<option id = "2" value="2">Japan</option>	
+		</select>
+	
+		<select id = "cities">
+			<option selected value="0"></option>
+			<option value="1"></option>
+			<option value="2"></option>
+			<option value="3"></option>
+			<option value="4"></option>
+		</select>
+		<br>
+		<br>
+		<span>Ukraine</span>
+		<span>,</span>
+		<span>Lviv</span>	
+
+		<script type="text/javascript">
+			let countryArray = ["Ukraine","USA","Japan"];
+			let ukrCities = ["Lviv","Kyiv","Dnipro","Odessa","Ternopil"];
+			let usaCities = ["Washington","Chicago","Houston","Los Angeles","San Jose"];
+			let japanCities = ["Tokyo","Kyoto","Osaka","Hiroshima","Yokohama"];
+			let citiesArray;
+			let countryNumber = 0;
+		
+			function citiesList(countryNumber) {
+				if (countryNumber == "0"){	
+					citiesArray = ukrCities;
+					document.getElementById("country").value = 0;
+				}
+				if (countryNumber == "1"){
+					citiesArray = usaCities;
+					document.getElementById("country").value = 1;
+				}
+				if (countryNumber == "2"){
+					citiesArray = japanCities;
+					document.getElementById("country").value = 2;
+				}
+				
+				for (i = 0; i < citiesArray.length; i++){
+						// let newOption = document.createElement("option");	//створюєм новий елемент option
+						// newOption.id = i; 									//додаєм id
+						// document.body.children[1].appendChild(newOption);	//вставляєм елемент в html 
+					document.body.children[1].children[i].textContent = citiesArray[i];//додаємо контекс	
+				}
+				
+				document.body.children[4].textContent = countryArray[document.getElementById("country").value];
+				document.body.children[6].textContent = citiesArray[document.getElementById("cities").value];	
+			}
+			
+			document.getElementById("country").onchange = function(){ // івент на зміну в списку країн
+					countryNumber = document.getElementById("country").value;
+					citiesList(countryNumber);
+					}
+
+			document.getElementById("cities").onchange = function(){	//івент на зміну в списку міст 
+					document.body.children[6].textContent = citiesArray[document.getElementById("cities").value];					
+				}
+		citiesList(0);
+	
+		</script>			
+	</body>		
+	</html>	 -->
+ 
