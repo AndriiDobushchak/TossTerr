@@ -1,0 +1,117 @@
+<!-- --- Task 1 ----- -->
+	
+	<!-- <!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>Lesson9</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<a href="https://ajax.googleapis.com">Link with target="_blank"</a>
+		<br><br>
+		<a href="http://example.com/image-file.png">Link without target="_blank"</a>	
+		<script>
+			$("a[href^='https://']").attr("target", "_blank");
+			
+		</script>		
+	</body>
+	</html>	 -->
+
+<!-- --- Task 2 ----- -->
+	
+	<!-- <!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>Lesson9</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+
+		<h2 class="head">header1</h2>
+	    <h2 class="head">header2 <span class="inner">inner elem1</span></h2>
+	    <h2>header3</h2>
+	    <h2 class="head">header4<span>inner elem2</span></h2>
+	    <h2>header5</h2>
+
+		<script>
+			$(".head").css("backgroundColor", "green");
+			$(".inner").css("fontSize", "35px");
+			
+		</script>		
+	</body>
+	</html>	 -->
+
+<!-- --- Task 3 ----- -->
+	
+	<!-- <!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>Lesson9</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<h3>header1</h3>
+	   	<div>text1</div>
+	   	<h3>header2</h3>
+	   	<div>text2</div>
+	   	
+
+		<script>
+			
+			$("h3:first").before($("h3").next("div:first"));
+			$("h3").before($("h3").next("div"));
+			$("h3:eq(0)").prev("div").remove();	// h3:eq(0) ===  h3:first
+
+		</script>		
+	</body>
+	</html>	 -->
+
+<!-- --- Task 4 ----- -->
+	
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">	
+		<title>Lesson9</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<h3>Choose three options</h3>
+	   	<input type="checkbox" name="" value="0"> checkbox 1
+	   	<br>
+	   	<input type="checkbox" name="" value="0"> checkbox 2
+	   	<br>
+	   	<input type="checkbox" name="" value="0"> checkbox 3
+	   	<br>
+	   	<input type="checkbox" name="" value="0"> checkbox 4
+	   	<br>
+	   	<input type="checkbox" name="" value="0"> checkbox 5
+	   	<br>
+	   	<input type="checkbox" name="" value="0"> checkbox 6 
+						
+
+		<script>
+			
+			let checkedLimit = function() { // обробник події клік
+			let checked = $("input:checked").length; // кількість чекнутих боксів
+			let current = $(this).attr("value"); // значення бокса 1 чи 0
+
+			if (current === "1"){
+				$(this).attr("value","0");
+			}
+			else ($(this).attr("value","1"));
+			
+			if (checked == 3) {
+				$("input[value='0']").attr("disabled","true")
+			}
+			else ($("input").removeAttr("disabled"));
+		}
+		
+		$("input").on("click",checkedLimit);
+		
+		</script>		
+	</body>
+	</html>	
